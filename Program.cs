@@ -1,5 +1,6 @@
 // Program.cs — .NET 8
 
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Azure.Identity;
@@ -121,19 +122,22 @@ public record OrderDto(string CustomerId, decimal Amount);
 
 public class Order
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public string CustomerId { get; set; } = default!;
-    public decimal Amount { get; set; }
-    public DateTime CreatedUtc { get; set; } = DateTime.UtcNow;
+    public Guid Id { get; init; } = Guid.NewGuid();
+    [MaxLength(255)]
+    public string CustomerId { get; init; } = null!;
+    public decimal Amount { get; init; }
+    public DateTime CreatedUtc { get; init; } = DateTime.UtcNow;
 }
 
 public class OutboxMessage
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
-    public string Type { get; set; } = default!;
-    public string Payload { get; set; } = default!;
-    public string? CorrelationId { get; set; }
-    public DateTime CreatedUtc { get; set; } = DateTime.UtcNow;
+    public Guid Id { get; init; } = Guid.NewGuid();
+
+    public string Type { get; init; } = default!;
+
+    public string Payload { get; init; } = default!;
+    public string? CorrelationId { get; init; }
+    public DateTime CreatedUtc { get; init; } = DateTime.UtcNow;
     public DateTime? DispatchedUtc { get; set; }
     public int AttemptCount { get; set; }
 }
@@ -237,11 +241,7 @@ public class OrderQueueConsumer : BackgroundService
         });
 
         processor.ProcessMessageAsync += HandleAsync;
-        processor.ProcessErrorAsync += err =>
-        {
-            // log err.Exception
-            return Task.CompletedTask;
-        };
+        processor.ProcessErrorAsync += err => Task.CompletedTask;
 
         await processor.StartProcessingAsync(stoppingToken);
 
