@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SbOutboxSample")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9c65ac5f50f40178d3d7bf8f25d943a0fd00eb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a475f2e506695578261082cb43a8ac07392acf80")]
 [assembly: System.Reflection.AssemblyProductAttribute("SbOutboxSample")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SbOutboxSample")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
