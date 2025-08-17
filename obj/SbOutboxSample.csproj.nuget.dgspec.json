@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\SbOutboxSample\\SbOutboxSample\\SbOutboxSample.csproj": {}
+    "E:\\Git\\Azure\\SbOutboxSample\\SbOutboxSample.csproj": {}
   },
   "projects": {
-    "E:\\Git\\SbOutboxSample\\SbOutboxSample\\SbOutboxSample.csproj": {
+    "E:\\Git\\Azure\\SbOutboxSample\\SbOutboxSample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\SbOutboxSample\\SbOutboxSample\\SbOutboxSample.csproj",
+        "projectUniqueName": "E:\\Git\\Azure\\SbOutboxSample\\SbOutboxSample.csproj",
         "projectName": "SbOutboxSample",
-        "projectPath": "E:\\Git\\SbOutboxSample\\SbOutboxSample\\SbOutboxSample.csproj",
+        "projectPath": "E:\\Git\\Azure\\SbOutboxSample\\SbOutboxSample.csproj",
         "packagesPath": "C:\\Users\\vladk\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\SbOutboxSample\\SbOutboxSample\\obj\\",
+        "outputPath": "E:\\Git\\Azure\\SbOutboxSample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Azure.Identity": {
               "target": "Package",
